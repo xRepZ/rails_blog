@@ -1,0 +1,1021 @@
+Started GET "/" for 127.0.0.1 at 2022-06-28 23:08:30 +0300
+  [1m[35m (78.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 71.9ms | Allocations: 838)
+Completed 200 OK in 938ms (Views: 628.5ms | ActiveRecord: 0.0ms | Allocations: 7712)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (560.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (787.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20220628205600)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "parent_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220628205600"]]
+  [1m[36mTRANSACTION (640.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-28 21:10:57.644439"], ["updated_at", "2022-06-28 21:10:57.644439"]]
+  [1m[36mTRANSACTION (651.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-06-29 00:51:06 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 733)
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 6454)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-29 00:51:07 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 405)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-29 00:51:10 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dakz/.local/share/gem/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 324)
+
+
+Started GET "/students" for 127.0.0.1 at 2022-06-29 00:51:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 00:51:47 +0300
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2377)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/studendts/number" for 127.0.0.1 at 2022-06-29 00:53:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studendts/number"):
+  
+Started GET "/studendts/number" for 127.0.0.1 at 2022-06-29 00:54:36 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/studendts/number"):
+  
+Started GET "/studets/number" for 127.0.0.1 at 2022-06-29 00:54:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studets/number"):
+  
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 00:54:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/number"):
+  
+Started GET "/students" for 127.0.0.1 at 2022-06-29 00:54:56 +0300
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4928)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 00:55:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/number"):
+  
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:03:16 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 1.5ms | Allocations: 452)
+  Rendered layout layouts/application.html.erb (Duration: 1444.8ms | Allocations: 89913)
+Completed 200 OK in 1461ms (Views: 1451.5ms | ActiveRecord: 0.0ms | Allocations: 95794)
+
+
+Started GET "/students/" for 127.0.0.1 at 2022-06-29 01:03:45 +0300
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2514)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:06:16 +0300
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2316)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2736)
+
+
+Started GET "/students/number/1" for 127.0.0.1 at 2022-06-29 01:07:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/number/1"):
+  
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:07:37 +0300
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2607)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2979)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2022-06-29 01:07:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/1"):
+  
+Started GET "/students/number1" for 127.0.0.1 at 2022-06-29 01:07:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/number1"):
+  
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:08:00 +0300
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2407)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2741)
+
+
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:12:46 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2850)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 8753)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students#number</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.title %>
+    7:     </li>
+  
+app/views/students/number.html.erb:4
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:13:45 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2850)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 8753)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students#number</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.id %>
+    7:     </li>
+  
+app/views/students/number.html.erb:4
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:14:22 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2850)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 8753)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students#number</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+  
+app/views/students/number.html.erb:4
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:14:24 +0300
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1476)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1812)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students#number</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+  
+app/views/students/number.html.erb:4
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:14:25 +0300
+Processing by StudentsController#number as */*
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  Rendered students/number.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1379)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1462)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1760)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students#number</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+  
+app/views/students/number.html.erb:4
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:17:26 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4924)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:20:09 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4924)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/" for 127.0.0.1 at 2022-06-29 01:23:16 +0300
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2268)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:25:25 +0300
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2236)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:41:41 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4924)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:44:25 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 5735)
+
+
+  
+NameError (undefined local variable or method `students' for #<StudentsController:0x0000000000a988>
+Did you mean?  students_url):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:45:12 +0300
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 12ms (Allocations: 2294)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:45:22 +0300
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 3ms (Allocations: 2237)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:45:25 +0300
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 3ms (Allocations: 2235)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:45:27 +0300
+Processing by StudentsController#number as */*
+Completed 500 Internal Server Error in 6ms (Allocations: 2235)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/" for ::1 at 2022-06-29 01:52:07 +0300
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 2274)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/" for ::1 at 2022-06-29 01:52:22 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4919)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/" for ::1 at 2022-06-29 01:52:49 +0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4919)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/" for ::1 at 2022-06-29 01:52:51 +0300
+Processing by StudentsController#number as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2268)
+
+
+  
+NameError (uninitialized constant StudentsController::Students):
+  
+app/controllers/students_controller.rb:3:in `number'
+Started GET "/" for ::1 at 2022-06-29 01:57:32 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  [1m[36mStudent Load (38.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/number.html.erb:4
+  Rendered students/number.html.erb within layouts/application (Duration: 221.5ms | Allocations: 9822)
+  Rendered layout layouts/application.html.erb (Duration: 221.9ms | Allocations: 9920)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 39.6ms | Allocations: 11952)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stundents' for #<ActionView::Base:0x0000000000ea88>
+Did you mean?  students
+               @students):
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+    8:   <% end %>
+    9: </ul>
+  
+app/views/students/number.html.erb:6
+app/views/students/number.html.erb:4
+Started GET "/" for ::1 at 2022-06-29 01:57:33 +0300
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/number.html.erb:4
+  Rendered students/number.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4781)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4867)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 5195)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stundents' for #<ActionView::Base:0x0000000000edd0>
+Did you mean?  students
+               @students):
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+    8:   <% end %>
+    9: </ul>
+  
+app/views/students/number.html.erb:6
+app/views/students/number.html.erb:4
+Started GET "/" for ::1 at 2022-06-29 01:57:36 +0300
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/number.html.erb:4
+  Rendered students/number.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4734)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4817)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 5128)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stundents' for #<ActionView::Base:0x0000000000f0c8>
+Did you mean?  students
+               @students):
+    3: <ul>
+    4:   <% @students.each do |students| %>
+    5:     <li>
+    6:       <%= stundents.name %>
+    7:     </li>
+    8:   <% end %>
+    9: </ul>
+  
+app/views/students/number.html.erb:6
+app/views/students/number.html.erb:4
+Started GET "/" for ::1 at 2022-06-29 01:59:39 +0300
+Processing by StudentsController#number as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/number.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/number.html.erb:4
+  Rendered students/number.html.erb within layouts/application (Duration: 2.2ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 949.7ms | Allocations: 35412)
+Completed 200 OK in 953ms (Views: 951.6ms | ActiveRecord: 0.1ms | Allocations: 36579)
+
+
+Started GET "/students/number" for 127.0.0.1 at 2022-06-29 01:59:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/students/number"):
+  
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (683.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1096.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20220629175010)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220629175010"]]
+  [1m[36mTRANSACTION (846.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-29 17:58:33.252292"], ["updated_at", "2022-06-29 17:58:33.252292"]]
+  [1m[36mTRANSACTION (489.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-29 21:14:08 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1259)
+  Rendered layout layouts/application.html.erb (Duration: 319.0ms | Allocations: 35856)
+Completed 200 OK in 416ms (Views: 345.7ms | ActiveRecord: 0.2ms | Allocations: 42515)
+
+
+Started GET "/" for ::1 at 2022-06-29 22:41:36 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 257.4ms | Allocations: 6195)
+  Rendered layout layouts/application.html.erb (Duration: 257.9ms | Allocations: 6304)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.4ms | Allocations: 13107)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_article_path' for #<ActionView::Base:0x0000000000a988>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Article", new_article_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:43:20 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 4982)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 5071)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms | Allocations: 6205)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000acf8>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:46:25 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4970)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5059)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 6188)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000b068>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:46:50 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 4970)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5059)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms | Allocations: 6188)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000b3d8>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:47:00 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 6227)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 6336)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.2ms | Allocations: 13114)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000a988>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:50:05 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 6227)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6336)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms | Allocations: 13114)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000a988>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:53:02 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5467)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5556)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 7280)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000e718>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/" for ::1 at 2022-06-29 22:53:05 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 4646)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4729)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms | Allocations: 5060)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000eb00>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/new" for ::1 at 2022-06-29 22:56:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/posts" for ::1 at 2022-06-29 22:56:45 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4718)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4803)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 5139)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x0000000000f1b8>
+Did you mean?  new_polymorphic_path):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= link_to "New Post", new_post_path %>
+  
+app/views/posts/index.html.erb:10
+Started GET "/posts/new" for ::1 at 2022-06-29 22:56:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+Started GET "/" for ::1 at 2022-06-29 23:08:25 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 210.9ms | Allocations: 36112)
+Completed 200 OK in 225ms (Views: 214.3ms | ActiveRecord: 0.2ms | Allocations: 42945)
+
+
+Started GET "/posts/new" for ::1 at 2022-06-29 23:08:29 +0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 187.9ms | Allocations: 6287)
+  Rendered layout layouts/application.html.erb (Duration: 188.2ms | Allocations: 6387)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 1.0ms | Allocations: 11570)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:   <div>
+    5:     <%= form.label :title %><br>
+    6:     <%= form.text_field :title %>
+    7:     <% @form.errors.full_messages_for(:title).each do |message| %>
+    8:     <div><%= message %></div>
+    9:     <% end %>
+   10: 
+  
+app/views/posts/new.html.erb:7
+app/views/posts/new.html.erb:3
+Started GET "/" for ::1 at 2022-06-29 23:10:33 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 35968)
+Completed 200 OK in 72ms (Views: 64.7ms | ActiveRecord: 0.3ms | Allocations: 42801)
+
+
+Started GET "/posts/new" for ::1 at 2022-06-29 23:10:35 +0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 37.8ms | Allocations: 3772)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 6106)
+Completed 200 OK in 84ms (Views: 55.1ms | ActiveRecord: 1.6ms | Allocations: 11322)
+
+
+Started POST "/posts" for ::1 at 2022-06-29 23:10:48 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Hello", "body"=>"World"}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2077)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4441)
+Completed 422 Unprocessable Entity in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6082)
+
+
+Started POST "/posts" for ::1 at 2022-06-29 23:11:00 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Hello", "body"=>"Hello World!"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["body", "Hello World!"], ["created_at", "2022-06-29 20:11:00.085654"], ["updated_at", "2022-06-29 20:11:00.085654"]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (372.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 382ms (ActiveRecord: 373.9ms | Allocations: 3422)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-29 23:11:00 +0300
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 11241)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 11336)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 11662)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1><%= @post.title %></h1>
+    2: 
+    3: <p><%= @post.body %></p>
+  
+app/views/posts/show.html.erb:1
+Started GET "/" for ::1 at 2022-06-29 23:16:14 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 6228)
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 40711)
+Completed 200 OK in 99ms (Views: 88.2ms | ActiveRecord: 1.0ms | Allocations: 47553)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-29 23:16:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2376)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2473)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2841)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1><%= @post.title %></h1>
+    2: 
+    3: <p><%= @post.body %></p>
+  
+app/views/posts/show.html.erb:1
+Started GET "/" for ::1 at 2022-06-29 23:16:20 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 757)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3316)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 3704)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-29 23:16:22 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1460)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1754)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1><%= @post.title %></h1>
+    2: 
+    3: <p><%= @post.body %></p>
+  
+app/views/posts/show.html.erb:1
+Started GET "/" for ::1 at 2022-06-29 23:21:33 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 6228)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 40774)
+Completed 200 OK in 80ms (Views: 71.5ms | ActiveRecord: 0.7ms | Allocations: 47616)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-29 23:21:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1670)
+
+
+  
+NoMethodError (undefined method `permit' for "1":String):
+  
+app/controllers/posts_controller.rb:7:in `show'
+Started GET "/posts/1" for ::1 at 2022-06-29 23:24:15 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 81.2ms | Allocations: 14306)
+Completed 200 OK in 106ms (Views: 90.0ms | ActiveRecord: 1.6ms | Allocations: 20853)
+
+
+Started GET "/posts/" for ::1 at 2022-06-29 23:24:26 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3228)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 3597)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-29 23:24:27 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2400)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 3228)
+
+
+Started GET "/posts/" for ::1 at 2022-06-29 23:24:31 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 652)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3046)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3386)
+
+
+Started GET "/posts/new" for ::1 at 2022-06-29 23:24:33 +0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3656)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5985)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 6461)
+
+
+Started POST "/posts" for ::1 at 2022-06-29 23:25:14 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Задача", "body"=>"Сделать задачу"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (4.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Задача"], ["body", "Сделать задачу"], ["created_at", "2022-06-29 20:25:14.560896"], ["updated_at", "2022-06-29 20:25:14.560896"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (334.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 347ms (ActiveRecord: 339.3ms | Allocations: 3736)
+
+
+Started GET "/posts/2" for ::1 at 2022-06-29 23:25:14 +0300
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2525)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 3438)
+
+
+Started GET "/posts/" for ::1 at 2022-06-29 23:25:21 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3134)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3472)
+
+
+Started GET "/posts/" for ::1 at 2022-06-30 00:06:40 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (24.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 80.0ms | Allocations: 6278)
+  Rendered layout layouts/application.html.erb (Duration: 362.1ms | Allocations: 41435)
+Completed 200 OK in 725ms (Views: 480.0ms | ActiveRecord: 25.3ms | Allocations: 48322)
+
+
+Started GET "/posts/2" for ::1 at 2022-06-30 00:06:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 2791)
+Completed 200 OK in 191ms (Views: 26.8ms | ActiveRecord: 0.3ms | Allocations: 5897)
+
+
+Started GET "/posts/1" for ::1 at 2022-06-30 00:06:54 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2406)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 3216)
+
+
